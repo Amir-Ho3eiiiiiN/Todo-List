@@ -1,0 +1,153 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  transition: all 100ms linear;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+
+.title_app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.todo_app {
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.container h2 {
+  padding-bottom: 1rem;
+  font-size: 3.2rem;
+}
+
+.title_app_complte span {
+  margin: 0.5rem;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.title_app_complte span:hover {
+  color: red;
+}
+
+.todo_app_list {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.todo_app_list .todo_option {
+  height: 15rem;
+  border: 1px solid #fff;
+  color: rgb(204, 204, 204);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.todo_option h3 {
+  font-size: 2rem;
+}
+
+.todo_option p {
+  font-size: 1.7rem;
+}
+
+.todo_option .todo_control {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.fa-trash-alt {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-check-square {
+  cursor: pointer;
+}
+
+.todo_option_input {
+  height: 3rem;
+  width: 80%;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  padding: 0 0.5rem;
+  display: none;
+}
+
+.todo_button_add_first {
+  background-color: rgba(102, 244, 102, 0.8);
+  color: #fff;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.todo_button_add_second {
+  background-color: rgba(102, 244, 102, 0.8);
+  color: #fff;
+  width: 80%;
+  height: 3rem;
+  display: flex;
+  border-radius: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.todo_button_add:hover {
+  background-color: transparent;
+  border: 0.3rem solid rgba(102, 244, 102, 0.8);
+  color: rgba(102, 244, 102, 0.8);
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .todo_app_list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 720px) {
+  .todo_app_list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .todo_app_list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
